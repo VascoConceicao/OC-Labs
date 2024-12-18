@@ -1,0 +1,49 @@
+
+---------- Same Tag Same Index ----------
+Write; Address 0; Value 0; Time 101
+Read; Address 0; Value 0; Time 102
+Write; Address 4; Value 1; Time 103
+Read; Address 4; Value 1; Time 104
+Write; Address 8; Value 2; Time 105
+Read; Address 8; Value 2; Time 106
+
+---------- Different Tag Same Index ----------
+Write; Address 0; Value 0; Time 101
+Read; Address 0; Value 0; Time 102
+Write; Address 16384; Value 1; Time 253
+Read; Address 16384; Value 1; Time 254
+Write; Address 32768; Value 2; Time 405
+Read; Address 32768; Value 2; Time 406
+
+---------- Different Index ----------
+Write; Address 16807; Value 0; Time 101
+Read; Address 16807; Value 0; Time 102
+Write; Address 15089; Value 1; Time 203
+Read; Address 15089; Value 1; Time 204
+Write; Address 44249; Value 2; Time 305
+Read; Address 44249; Value 2; Time 306
+
+---------- Read Miss ----------
+Write; Address 0; Value 0; Time 101
+Write; Address 16384; Value 1; Time 252
+Write; Address 32768; Value 2; Time 403
+Read; Address 0; Value 0; Time 554
+Read; Address 16384; Value 1; Time 655
+Read; Address 32768; Value 2; Time 756
+
+---------- Address Checker ----------
+Write; Address 16448; Value 48; Time 101
+Write; Address 32832; Value 20; Time 252
+Read; Address 16448; Value 48; Time 403
+
+---------- Ping Pong 1 ----------
+Write; Address 0; Value 0; Time 101
+Write; Address 16384; Value 1; Time 252
+Read; Address 0; Value 0; Time 403
+Read; Address 16384; Value 1; Time 504
+Read; Address 0; Value 0; Time 605
+Read; Address 16384; Value 1; Time 706
+Read; Address 0; Value 0; Time 807
+Read; Address 16384; Value 1; Time 908
+
+Average Time: 97635
